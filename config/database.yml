@@ -1,0 +1,15 @@
+#postgres
+
+default: &default
+  adapter: postgresql
+  encoding: UTF8 
+  host: localhost
+  username: bd_agenda
+  password: zxcv1234 
+  pool: 5
+  timeout: 5000
+  #database: auditoria
+
+development:
+  <<: *default
+  database: agenda

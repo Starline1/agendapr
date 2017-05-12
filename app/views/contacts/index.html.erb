@@ -1,0 +1,15 @@
+ 
+<ul class="collection"> 
+   <% @contactos.each do |contacto| %>
+    <li class="collection-item avatar">
+      <i class="material-icons circle green">contacts</i>
+      <span class="title"><%=contacto.nombre%></span>
+      <p><%=contacto.telefono%><br>
+         <%=contacto.direccion%><br>
+         <%=contacto.email%>         
+      </p>
+     </li>
+
+ <%end%>
+</ul>
+            

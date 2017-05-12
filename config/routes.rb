@@ -1,6 +1,9 @@
 Rails.application.routes.draw do
-  get 'agenda/index'
-  root 'agenda#index'
+  devise_for :users
+  get 'contacts/index'
+  get 'contacts/admin'
+  resources :contacts
+  root 'contacts#index'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

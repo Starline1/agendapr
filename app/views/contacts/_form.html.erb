@@ -1,0 +1,22 @@
+<h1><%=name%> contacto</h1>
+<%=form_for @contact do |f|%>
+  <div class="field">
+     <%=f.text_field :nombre,placeholder:"Nombre", class:"form-control" %>
+  </div>
+  <div class="field">
+     <%=f.text_field :telefono,placeholder:"Telefono", class:"form-control" %>
+  </div>
+   <div class="field">
+     <%=f.text_field :direccion,placeholder:"Dirección", class:"form-control" %>
+  </div>
+  
+   <div class="field">
+     <%=f.text_field :email,placeholder:"Email", class:"form-control" %>
+  </div>
+  
+  <div class="field">
+  <%= f.submit "Guardar", class:"btn be-red "   %>
+  <%= link_to "Cancelar", contacts_path, class:"btn"%>
+  </div>
+
+<%end%>

@@ -9,7 +9,11 @@
 </head>
 <body>
 <div class="container">
-<%= yield %>
+       <%= render :partial=> 'layouts/nav' %>
+       <p class="notice"><%= notice %></p>
+       <p class="alert"><%= alert %></p>
+       <p class="alert"><%=flash[:error] %></p>
+       <%= yield %>
 </div>
 </body>
 </html>

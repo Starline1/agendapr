@@ -1,0 +1,16 @@
+
+<ul class="collection"> 
+   <% @contactos.each do |contacto| %>
+    <li class="collection-item avatar">
+      <i class="material-icons circle green">contacts</i>
+      <span class="title"><%=contacto.nombre%></span>
+      <p><%=contacto.telefono%><br>
+         <%=contacto.direccion%><br>
+         <%=contacto.email%>
+          <%=link_to "Actualizar", edit_contact_path(contacto)  %>
+          <%= link_to "Eliminar" ,contacto, method: :delete %>
+      </p>
+     </li>
+
+ <%end%>
+</ul>
